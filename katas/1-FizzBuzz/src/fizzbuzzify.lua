@@ -1,7 +1,13 @@
 local function fizzbuzzify (num)
-  if (num % 3 == 0 and num % 5 == 0) then return 'fizzbuzz' end
-  if (num % 3 == 0) then return 'fizz' end
-  if (num % 5 == 0) then return 'buzz' end
+  local isFizz, isBuzz = num % 3 == 0, num % 5 == 0
+
+  if (isFizz and isBuzz) 
+    then return 'fizzbuzz' 
+  elseif (isFizz) 
+    then return 'fizz'
+  elseif (isBuzz) 
+    then return 'buzz' 
+  end
 
   return tostring(num)
 end
