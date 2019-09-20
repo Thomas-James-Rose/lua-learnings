@@ -26,4 +26,15 @@ function testFizzBuzzing()
   luaunit.assertEquals(fizzbuzzify(60), 'fizzbuzz')
 end
 
-os.exit( luaunit.LuaUnit.run() )
+function testNoFizzingOrBuzzing()
+  luaunit.assertEquals(fizzbuzzify(2), '2')
+  luaunit.assertEquals(fizzbuzzify(4), '4')
+  luaunit.assertEquals(fizzbuzzify(8), '8')
+  luaunit.assertEquals(fizzbuzzify(16), '16')
+end
+
+
+local runner = luaunit.LuaUnit.new()
+runner:setOutputType("tap")
+os.exit( runner:runSuite() )
+
