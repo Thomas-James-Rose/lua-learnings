@@ -14,6 +14,7 @@ It can be installed via [Homebrew](https://brew.sh/). :beer:
 
 1. `0` is truthy! :see_no_evil:
 2. Variables are global by default (but can be scoped by using `local`) :globe_with_meridians:
+3. Not equal comparison is represented by `~=` rather than `!=`. :hear_no_evil:
 
 ## Useful Links :link:
 
